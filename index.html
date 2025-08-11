@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Hospital - Health </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" class="img-fluid" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end" id="navbarNav">
+                <ul class="navbar-nav me-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-appointment">Make an Appointment</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center hero-content-carousel">
+
+                <!-- Content Carousel (Left Column) -->
+                <div class="col-lg-6 col-md-12 content-carousel">
+                    <!-- Slide 1 -->
+                    <div class="content-slide active">
+                        <h1 class="hero-title">Health is wealth<br>keep it healthy</h1>
+                        <p class="hero-subtitle">
+                            Almost before we knew it, we had left the ground and were soaring through the clouds with
+                            expert care and advanced medical technology.
+                        </p>
+                        <button class="btn btn-service">Take a Service</button>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="content-slide">
+                        <h1 class="hero-title">Expert Medical<br>Care For You</h1>
+                        <p class="hero-subtitle">
+                            Our dedicated team of healthcare professionals provides comprehensive medical services with
+                            state-of-the-art equipment and personalized treatment plans.
+                        </p>
+                        <button class="btn btn-service">Book Consultation</button>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="content-slide">
+                        <h1 class="hero-title">Your Wellness<br>Our Priority</h1>
+                        <p class="hero-subtitle">
+                            Experience premium healthcare with our modern facilities, experienced doctors, and
+                            commitment to providing exceptional patient care every step of the way.
+                        </p>
+                        <button class="btn btn-service">Learn More</button>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="content-slide">
+                        <h1 class="hero-title">Advanced Treatment<br>Better Results</h1>
+                        <p class="hero-subtitle">
+                            Utilizing cutting-edge medical technology and innovative treatment methods to ensure the
+                            best possible outcomes for our patients' health and recovery.
+                        </p>
+                        <button class="btn btn-service">Get Started</button>
+                    </div>
+
+                    <!-- Navigation Dots -->
+                    <div class="carousel-nav">
+                        <button class="nav-dot active" data-slide="0"></button>
+                        <button class="nav-dot" data-slide="1"></button>
+                        <button class="nav-dot" data-slide="2"></button>
+                        <button class="nav-dot" data-slide="3"></button>
+                    </div>
+                </div>
+
+                <!-- Fixed Image (Right Column) -->
+                <div class="col-lg-6 col-md-12 fixed-image-container">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Healthcare Professional" class="hero-image img-fluid">
+                    <div class="image-overlay"></div>
+                </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control prev" id="prevBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
+                </svg>
+            </button>
+            <button class="carousel-control next" id="nextBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.09l4.58-4.59-4.58-4.59L10 5.5l6 6-6 6z" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Us Section Starts -->
+    <section class="about">
+        <div class="container py-3">
+            <div class="main-head">
+                <h2 class="main-title text-center py-4">About Us</h2>
+            </div>
+            <div class="row">
+            <div class="col-lg-6 col-md-12 about-content">
+                <h4 class="about-title">Image</h4>
+            </div>
+            <div class="col-lg-6 col-md-12 about-image">
+                <h2 class="about-title">Caring for Hearts, Saving Lives.</h2>
+                <p class="lh-lg">At Irene Hospital – Heart Care Centre, we provide expert cardiovascular care with advanced technology and a compassionate touch. From preventive screenings to complex heart surgeries, our mission is to protect, heal, and strengthen the hearts of our community.</p>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    <!-- About Us Section Ends -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>

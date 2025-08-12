@@ -139,3 +139,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Scroll Indicator
+document.querySelector('.scroll-indicator').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Show/hide scroll indicator based on scroll position
+window.addEventListener('scroll', function () {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (window.pageYOffset > 200) {
+        scrollIndicator.style.opacity = '1';
+    } else {
+        scrollIndicator.style.opacity = '0.8';
+    }
+});

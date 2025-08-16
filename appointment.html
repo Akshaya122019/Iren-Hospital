@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Hospital - City Heart Centre</title>
+    <link href="images/logo.png" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <div class="call_pin">
+    <a href="tel:+918903557197"><img src="images/phone-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+    <div class="whats_pin">
+    <a href="https://wa.me/8903557197" target="_blank"><img src="images/whatsapp-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" class="img-fluid me-4" width="50" height="50">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="tel:+91 8903557197" class="text-dark fw-bold me-3" style="text-decoration: none;">
+                    <img src="images/phone.png" alt="Call" style="width: 20px;" /> Call Us
+                </a>
+                <a href="https://wa.me/8903557197" target="_blank" class="text-dark fw-bold me-3"
+                    style="text-decoration: none;">
+                    <img src="images/whatsapp.png" alt="WhatsApp" style="width: 20px;" />&nbsp;Whatsapp
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end" id="navbarNav">
+                <ul class="navbar-nav me-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our_doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn button">Make an Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+ <section class="hero-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8">
+                    <div class="banner-con wow fadeInLeft">
+                        <h1 class="banner-tit pt-4">Appointments</h1>
+                        <p class="hero-tagline lh-lg">
+                            Schedule your visit with ease and get timely care from our expert medical team.
+                        </p>
+                        <a href="appointment.html" class="btn btn-appointment">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Book Appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Appointment Start -->
+<div class="container py-5 wow fadeInUp">
+  <!-- Header Section -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-dark mb-3">
+      <i class="fas fa-calendar-check me-2"></i>Book Your Scan Appointment
+    </h2>
+    <img src="images/divider.png" alt="divider" class="img-fluid" width="150">
+  </div>
+
+  <!-- Form Section -->
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+      <div class="card shadow-lg border-0 rounded-4 app-card">
+
+        <!-- Card Body -->
+        <div class="card-body p-4 p-md-5">
+          <form id="app-form">
+            <!-- Name & Phone Row -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Full Name <span class="text-danger">*</span>
+                </label>
+                <input type="text" id="name" class="form-control form-control-lg border-2"
+                  placeholder="Enter your full name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Phone Number <span class="text-danger">*</span>
+                </label>
+                <input type="tel" id="phone" class="form-control form-control-lg border-2"
+                  placeholder="Enter your phone number" required>
+              </div>
+            </div>
+
+            <!-- Email & Age Row -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label text-dark">Email Address</label>
+                <input type="email" id="email" class="form-control form-control-lg border-2"
+                  placeholder="Enter your email">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Age <span class="text-danger">*</span>
+                </label>
+                <input type="number" id="age" class="form-control form-control-lg border-2"
+                  placeholder="Enter your age" min="1" max="120" required>
+              </div>
+            </div>
+
+            <!-- Gender & Scan Type Row -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label text-dark">Gender <span class="text-danger">*</span></label>
+                <div class="border rounded-3 p-3 bg-light">
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                      <label class="form-check-label fw-medium" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                      <label class="form-check-label fw-medium" for="female">Female</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required>
+                      <label class="form-check-label fw-medium" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Select Scan Type <span class="text-danger">*</span>
+                </label>
+                <select id="study" class="form-select form-select-lg border-2" required>
+                  <option selected disabled value="">Choose your scan type</option>
+                  <optgroup label="Scans">
+                    <option value="MRI Scan">MRI Scan</option>
+                    <option value="CT Scan">CT Scan</option>
+                    <option value="Digital X-Ray">Digital X-Ray</option>
+                    <option value="Ultrasound">Ultrasound</option>
+                    <option value="ECG">ECG</option>
+                    <option value="Colour Doppler">Colour Doppler</option>
+                  </optgroup>
+                  <optgroup label="Packages">
+                    <option value="VR-Master">VR-Master</option>
+                    <option value="VR-Master Plus">VR-Master Plus</option>
+                    <option value="VR-Diabetic Care">VR-Diabetic Care</option>
+                    <option value="VR-Women Wellness">VR-Women Wellness</option>
+                    <option value="VR-Cardiac Care">VR-Cardiac Care</option>
+                    <option value="VR-Cancer Screening">VR-Cancer Screening</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <!-- Date & Time Row -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Preferred Date <span class="text-danger">*</span>
+                </label>
+                <input type="date" id="date" class="form-control form-control-lg border-2" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-dark">
+                  Preferred Time
+                </label>
+                <input type="time" id="time" class="form-control form-control-lg border-2" required>
+              </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="mb-4">
+              <label class="form-label text-dark">Additional Notes</label>
+              <textarea id="notes" class="form-control border-2" rows="4"
+                placeholder="Any special instructions or medical history you'd like to share (optional)"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg py-3 fw-semibold">
+                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Appointment End -->
+
+
+     <!-- Footer Start -->
+    <footer class="wow fadeInUp">
+        <div class="container-fluid footer p-5 text-light py-5 wow fadeInUp mt-3" data-wow-delay="0.3s">
+            <div class="container pt-5">
+                <div class="row g-5 pt-4">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-dark mb-4">
+                            <img src="images/logo.png" alt="Logo" class="img-fluid" style="height: 70px;">
+                        </h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <h5 class="text-dark" style="font-style: italic;">Restoring Health with Compassion and Trust.</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 foot-icon">
+                        <h5 class="text-dark mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2 text-decoration-none" href="index.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="about.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>About
+                                Us</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="service.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Services </a>
+                            <a class="text-dark mb-2 text-decoration-none" href="our_doctors.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Our Doctors </a>
+                            <a class="text-dark text-decoration-none" href="contact.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 foot-icon text-dark">
+                        <h5 class="text-dark mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>181, KP Road, Mathias Nager, Nagercoil -
+                            629001
+                        <p>
+                        <p class="mb-2"><i class="bi bi-envelope-open me-2"></i>abc@gmail.com</p>
+                        <p class="mb-0"><i class="bi bi-telephone me-2"></i>+91 8903557197, 04652 - 278645</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5 class="text-dark mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank"
+                                href="https://www.linkedin.com/company/irene-hospital-chc/posts/?feedView=all"><i class="fab fa-linkedin fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.facebook.com/people/Irene-Hospital/61579508540143/"><i
+                                    class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/irene_hospital/"><i
+                                    class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.youtube.com/@IreneHospital-CHC"><i
+                                    class="fab fa-youtube fw-normal"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-dark copyright py-4">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center text-md-start">
+                        <p class="mb-md-0 text-center">&copy; 2025 All
+                            Rights Reserved. Designed by <a class="text-dark text-decoration-none" target="_blank"
+                                href="https://feathersoftwares.com/"><b>Feather Softwares</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+  <script>
+    document.querySelector('#app-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const age = document.getElementById('age').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const study = document.getElementById('study').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const notes = document.getElementById('notes').value || "None";
+
+      const message = `Hello, I would like to book an appointment.%0A%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Age: ${age}%0A` +
+        `Gender: ${gender}%0A` +
+        `Department: ${study}%0A` +
+        `Date: ${date}%0A` +
+        `Time: ${time}%0A` +
+        `Notes: ${notes}`;
+
+      const whatsappUrl = `https://wa.me/8903557197?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+
+
+</body>
+
+</html>

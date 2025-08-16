@@ -1,4 +1,62 @@
+ // Hospital preloader functionality
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const hospitalLoader = document.getElementById('hospitalPreloaderMain');
+                const hospitalContent = document.getElementById('hospitalMainContent');
+                
+                hospitalLoader.classList.add('hospital-fade-complete');
+                
+                setTimeout(function() {
+                    hospitalLoader.style.display = 'none';
+                    hospitalContent.style.display = 'block';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 4000); // Show hospital preloader for 4 seconds
+        });
 
+        // Function to show hospital preloader again (for demo purposes)
+        function showHospitalPreloader() {
+            const hospitalLoader = document.getElementById('hospitalPreloaderMain');
+            const hospitalContent = document.getElementById('hospitalMainContent');
+            
+            hospitalLoader.style.display = 'flex';
+            hospitalLoader.classList.remove('hospital-fade-complete');
+            hospitalContent.style.display = 'none';
+            document.body.style.overflow = 'hidden';
+            
+            // Reset hospital progress bar animation
+            const hospitalProgressBar = document.querySelector('.hospital-load-progress');
+            hospitalProgressBar.style.animation = 'none';
+            setTimeout(() => {
+                hospitalProgressBar.style.animation = 'hospital-progress-fill 4s ease-out forwards';
+            }, 10);
+            
+            // Hide hospital preloader again after 4 seconds
+            setTimeout(function() {
+                hospitalLoader.classList.add('hospital-fade-complete');
+                setTimeout(function() {
+                    hospitalLoader.style.display = 'none';
+                    hospitalContent.style.display = 'block';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 4000);
+        }
+
+        // Add hospital interactive hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const hospitalCross = document.querySelector('.hospital-medical-symbol');
+            
+            hospitalCross.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            hospitalCross.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        
 document.addEventListener('DOMContentLoaded', function () {
     try {
         const slides = Array.from(document.querySelectorAll('.content-slide'));
@@ -139,17 +197,67 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Scroll Indicator
-document.querySelector('.scroll-indicator').addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+$(document).ready(function(){
+            // Price carousel
+            $(".price-carousel").owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 1500,
+                margin: 25,
+                dots: false,
+                loop: true,
+                nav: true,
+                navText: [
+                    '<i class="bi bi-arrow-left"></i>',
+                    '<i class="bi bi-arrow-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 2
+                    }
+                }
+            });
 
-// Show/hide scroll indicator based on scroll position
-window.addEventListener('scroll', function () {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (window.pageYOffset > 200) {
-        scrollIndicator.style.opacity = '1';
-    } else {
-        scrollIndicator.style.opacity = '0.8';
+            // Testimonials carousel (if you have one)
+            $(".testimonial-carousel").owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                items: 1,
+                dots: false,
+                loop: true,
+                nav: true,
+                navText: [
+                    '<i class="bi bi-arrow-left"></i>',
+                    '<i class="bi bi-arrow-right"></i>'
+                ]
+            });
+        });
+
+//contact
+function sendDataToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    if (!name || !email || !phone || !message) {
+        alert('Please fill out all fields.');
+        return;
     }
-});
+
+    const whatsappMessage = `Name: ${name}\nEmail: ${email}\nPhoneNumber: ${phone}\nMessage: ${message}`;
+    const whatsappNumber = '8903557197';
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappUrl, '_blank');
+    alert('Your message has been sucessfully sent');
+}

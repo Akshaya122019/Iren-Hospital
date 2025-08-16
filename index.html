@@ -7,14 +7,55 @@
     <title>Irene Hospital - City Heart Centre</title>
     <link href="images/logo.png" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+
 </head>
 
 <body>
+    <div class="hospital-loading-screen hospital-preloader" id="hospitalPreloaderMain">
+        <div class="hospital-bg-icons">
+            <div class="hospital-floating-icon">⚕️</div>
+            <div class="hospital-floating-icon">💊</div>
+            <div class="hospital-floating-icon">🏥</div>
+            <div class="hospital-floating-icon">🩺</div>
+        </div>
+        
+        <div class="hospital-content-wrapper">
+            <div class="hospital-medical-symbol">
+                <div class="hospital-cross-bar-h"></div>
+                <div class="hospital-cross-bar-v"></div>
+            </div>
+            
+            <div class="hospital-pulse-monitor">
+                <div class="hospital-ecg-line"></div>
+            </div>
+            
+            <div class="hospital-main-title">HEALTHCARE</div>
+            <div class="hospital-sub-title">Loading your health portal</div>
+            
+            <div class="hospital-load-bar">
+                <div class="hospital-load-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="call_pin">
+    <a href="tel:+918903557197"><img src="images/phone-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+    <div class="whats_pin">
+    <a href="https://wa.me/8903557197" target="_blank"><img src="images/whatsapp-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -22,10 +63,10 @@
                 <img src="images/logo.png" alt="Logo" class="img-fluid me-4" width="50" height="50">
             </a>
             <div class="d-flex align-items-center gap-3">
-                <a href="tel:+91 9043863855" class="text-dark fw-bold me-3" style="text-decoration: none;">
+                <a href="tel:+91 8903557197" class="text-dark fw-bold me-3" style="text-decoration: none;">
                     <img src="images/phone.png" alt="Call" style="width: 20px;" /> Call Us
                 </a>
-                <a href="https://wa.me/9043863855" target="_blank" class="text-dark fw-bold me-3"
+                <a href="https://wa.me/8903557197" target="_blank" class="text-dark fw-bold me-3"
                     style="text-decoration: none;">
                     <img src="images/whatsapp.png" alt="WhatsApp" style="width: 20px;" />&nbsp;Whatsapp
                 </a>
@@ -47,13 +88,13 @@
                         <a class="nav-link" href="service.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="our_doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <button class="btn button">Make an Appointment</button>
+                <a href="appointment.html" class="btn button">Make an Appointment</a>
             </div>
         </div>
     </nav>
@@ -72,7 +113,7 @@
                             Almost before we knew it, we had left the ground and were soaring through the clouds with
                             expert care and advanced medical technology.
                         </p>
-                        <button class="btn btn-service">Take a Service</button>
+                        <a href="service.html" class="btn btn-service">Take a Service</a>
                     </div>
 
                     <!-- Slide 2 -->
@@ -82,7 +123,7 @@
                             Our dedicated team of healthcare professionals provides comprehensive medical services with
                             state-of-the-art equipment and personalized treatment plans.
                         </p>
-                        <button class="btn btn-service">Book Consultation</button>
+                        <a href="appointment.html" class="btn btn-service">Book Consultation</a>
                     </div>
 
                     <!-- Slide 3 -->
@@ -92,7 +133,7 @@
                             Experience premium healthcare with our modern facilities, experienced doctors, and
                             commitment to providing exceptional patient care every step of the way.
                         </p>
-                        <button class="btn btn-service">Learn More</button>
+                        <a href="about.html" class="btn btn-service">Learn More</a>
                     </div>
 
                     <!-- Slide 4 -->
@@ -102,7 +143,7 @@
                             Utilizing cutting-edge medical technology and innovative treatment methods to ensure the
                             best possible outcomes for our patients' health and recovery.
                         </p>
-                        <button class="btn btn-service">Get Started</button>
+                        <a href="#aboutt" class="btn btn-service">Get Started</a>
                     </div>
 
                     <!-- Navigation Dots -->
@@ -138,10 +179,10 @@
     </section>
 
     <!-- About Us Section Starts -->
-    <section class="about-section">
+    <section class="about-section" id="aboutt">
         <div class="container pt-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 about-text">
+                <div class="col-lg-6 about-text  wow fadeInLeft">
                     <h2 class="fw-bold mb-4">About Our Company</h2>
                     <h5>Caring for Hearts, Saving Lives.</h5>
                     <p class="lh-lg mb-4 text-justify text-muted">
@@ -152,7 +193,7 @@
                         <i class="fas fa-rocket me-2"></i>Learn More
                     </a>
                 </div>
-                <div class="col-lg-6 about-visual p-5">
+                <div class="col-lg-6 about-visual p-5 wow fadeInRight">
                     <div class="text-center">
                         <img src="images/about-gif.gif" alt="About Us" class="img-fluid about-image">
                     </div>
@@ -162,8 +203,97 @@
     </section>
     <!-- About Us Section Ends -->
 
+      <!-- Leadership Card -->
+    <div class="container wow fadeInUp">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-12">
+                <div class="bg-gradient-lite text-white rounded-4 p-4 p-md-5 shadow-lg">
+                    <div class="row align-items-center g-4">
+                        <!-- Doctor Image -->
+                        <div class="col-md-4 text-center">
+                            <div class="position-relative d-inline-block">
+                                <div class="bg-white rounded-4 p-4 shadow">
+                                        <img src="images/irene-doctor.JPG" alt="Irene Doctor" class="img-fluid">
+                                </div>
+                                <!-- Status Badge -->
+                                <span class="position-absolute bottom-0 end-0 badge bg-success rounded-pill p-2">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Info -->
+                        <div class="col-md-8">
+                            <div class="text-center text-md-start">
+                                <!-- Name & Title -->
+                                <div class="mb-3">
+                                    <h3 class="h4 fw-bold mb-2">Dr. Ashwin Lysander</h3>
+                                    <span class="badge bg-white bg-opacity-25 text-white px-3 py-2 rounded-pill fs-6">
+                                        Founder & Chief Medical Officer
+                                    </span>
+                                </div>
+
+                                <!-- Qualifications -->
+                                <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start mb-3 text-dark">
+                                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill">M.D</span>
+                                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill">D.M (CARDIO)</span>
+                                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill">M.Diab</span>
+                                    <span class="badge bg-light text-primary px-3 py-2 rounded-pill">D.Diab</span>
+                                </div>
+
+                                <!-- Description -->
+                                <p class="text-white-50 mb-4 lh-base">
+                                    A visionary leader with extensive experience in cardiology, diabetology, and general medicine. 
+                                    Dr. Lysander founded the hospital with a mission to provide world-class healthcare to the community.
+                                </p>
+
+                                <!-- Stats -->
+                                <div class="row g-3">
+                                    <div class="col-4">
+                                        <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                                            <h5 class="h6 fw-bold mb-1">15+</h5>
+                                            <small class="text-white-50">Years Experience</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                                            <h5 class="h6 fw-bold mb-1">50K+</h5>
+                                            <small class="text-white-50">Patients Treated</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="bg-white bg-opacity-10 rounded-3 p-3 text-center">
+                                            <h5 class="h6 fw-bold mb-1">24/7</h5>
+                                            <small class="text-white-50">Available</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quote Section -->
+                    <div class="mt-4 pt-4 border-top border-white border-opacity-25">
+                        <div class="text-center">
+                            <blockquote class="blockquote mb-0">
+                                <p class="fst-italic text-white-50 mb-2">
+                                    <i class="fas fa-quote-left me-2"></i>
+                                    Healthcare is not just about treating illness, it's about caring for the human spirit and fostering hope.
+                                    <i class="fas fa-quote-right ms-2"></i>
+                                </p>
+                                <div class="blockquote-footer text-white-50">
+                                    <cite title="Source Title">Dr. Ashwin Lysander</cite>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Service Start -->
-    <div class="container-fluid services-section">
+    <div class="container-fluid services-section wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
         <section class="container py-3">
             <div class="main-head py-4 text-center">
                 <h2 class="main-title fw-bold">Comprehensive Heart Care Services</h2>
@@ -339,7 +469,7 @@
     <!-- Service end -->
 
     <!-- Appointment Start -->
-    <div class="container-fluid">
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
         <!-- SVG definition for clip-path -->
         <svg width="0" height="0">
             <defs>
@@ -377,17 +507,154 @@
             </div>
         </div>
     </div>
-
     <!-- Appointment End -->
 
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="section-title mb-4">
+                        <h5 class="position-relative d-inline-block text-uppercase">❤️ Testimonial</h5>
+                        <h4 class="mb-0">Compassionate, patient-centered care in a trusted medical environment</h4>
+                    </div>
+                    <p class="mb-4">We believe every patient deserves compassionate care, clear communication, and a comforting environment. Our dedicated doctors and staff work tirelessly to ensure every visit is stress-free, from your first appointment to your complete recovery. Here’s what our patients have to say about their experiences with us.</p>
+                    <h5 class="text-uppercase text-primary" data-wow-delay="0.3s">Call for Appointment</h5>
+                    <h1 data-wow-delay="0.6s">+91 8903557197</h1>
+                </div>
+                <div class="col-lg-7">
+                    <div class="owl-carousel price-carousel" data-wow-delay="0.9s">
+                        <div class="price-item pb-4">
+                            <div class="position-relative">
+                                <div class="testimonial-img">
+                                    <img src="images/girl.png" class="img-fluid">  
+                                </div>
+                            </div>
+                            <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
+                                <h4>Gayatri Lekshmi</h4>
+                                <hr class="text-primary w-50 mx-auto mt-0">
+                                <p style="text-align: justify;">Delivered both my kids at this hospital. Dr Irene took care of me and all her patients with such motherly affection.</p>
+                            </div>
+                        </div>
+                        <div class="price-item pb-4">
+                            <div class="position-relative">
+                                <div class="testimonial-img">
+                                    <img src="images/boy.png" class="img-fluid">  
+                                </div>
+                            </div>
+                            <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
+                                <h4>PHILO SJ</h4>
+                                <hr class="text-primary w-50 mx-auto mt-0">
+                                <p style="text-align: justify;">Dr.irine is a kindful doctor. She takes her patience politely also carrying.fees also less,we are getting a very good treatment.</p>
+                            </div>
+                        </div>
+                        <div class="price-item pb-4">
+                            <div class="position-relative">
+                                <div class="testimonial-img">
+                                    <img src="images/girl.png" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
+                                <h4>Shiny Shyni</h4>
+                                <hr class="text-primary w-50 mx-auto mt-0">
+                                <p style="text-align: justify;flex-wrap: wrap;">All Doctors are very kindfull and caring. Also staffs are Good And a good nursing care And Receptionist staffs are Good</p>
+                            </div>
+                        </div>
+                        <div class="price-item pb-4">
+                            <div class="position-relative">
+                                <div class="testimonial-img">
+                                    <img src="images/girl.png" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
+                                <h4>Shahila Jaikumar</h4>
+                                <hr class="text-primary w-50 mx-auto mt-0">
+                                <p style="text-align: justify;flex-wrap: wrap;">Dr. Irene is a Very Senior efficient and kindful Doctor ever. Very good friendly staffs. Since 1995 i know Dr. Irene.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
+   <!-- Footer Start -->
+    <footer class="wow fadeInUp">
+        <div class="container-fluid footer p-5 text-light py-5 wow fadeInUp mt-3" data-wow-delay="0.3s">
+            <div class="container pt-5">
+                <div class="row g-5 pt-4">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-dark mb-4">
+                            <img src="images/logo.png" alt="Logo" class="img-fluid" style="height: 70px;">
+                        </h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <h5 class="text-dark" style="font-style: italic;">Restoring Health with Compassion and Trust.</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 foot-icon">
+                        <h5 class="text-dark mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2 text-decoration-none" href="index.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="about.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>About
+                                Us</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="service.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Services </a>
+                            <a class="text-dark mb-2 text-decoration-none" href="our_doctors.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Our Doctors </a>
+                            <a class="text-dark text-decoration-none" href="contact.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 foot-icon text-dark">
+                        <h5 class="text-dark mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>181, KP Road, Mathias Nager, Nagercoil -
+                            629001
+                        <p>
+                        <p class="mb-2"><i class="bi bi-envelope-open me-2"></i>abc@gmail.com</p>
+                        <p class="mb-0"><i class="bi bi-telephone me-2"></i>+91 8903557197, 04652 - 278645</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5 class="text-dark mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank"
+                                href="https://www.linkedin.com/company/irene-hospital-chc/posts/?feedView=all"><i class="fab fa-linkedin fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.facebook.com/people/Irene-Hospital/61579508540143/"><i
+                                    class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/irene_hospital/"><i
+                                    class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.youtube.com/@IreneHospital-CHC"><i
+                                    class="fab fa-youtube fw-normal"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-dark copyright py-4">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center text-md-start">
+                        <p class="mb-md-0 text-center">&copy; 2025 All
+                            Rights Reserved. Designed by <a class="text-dark text-decoration-none" target="_blank"
+                                href="https://feathersoftwares.com/"><b>Feather Softwares</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
-    <!-- Scroll to top indicator -->
-    <div class="scroll-indicator">↑</div>
-
-
+   <!-- Scripts in correct order -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 
 </body>

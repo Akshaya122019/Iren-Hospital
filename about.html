@@ -12,9 +12,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
+    <div class="call_pin">
+    <a href="tel:+918903557197"><img src="images/phone-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+    <div class="whats_pin">
+    <a href="https://wa.me/8903557197" target="_blank"><img src="images/whatsapp-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -22,10 +31,10 @@
                 <img src="images/logo.png" alt="Logo" class="img-fluid me-4" width="50" height="50">
             </a>
             <div class="d-flex align-items-center gap-3">
-                <a href="tel:+91 9043863855" class="text-dark fw-bold me-3" style="text-decoration: none;">
+                <a href="tel:+91 8903557197" class="text-dark fw-bold me-3" style="text-decoration: none;">
                     <img src="images/phone.png" alt="Call" style="width: 20px;" /> Call Us
                 </a>
-                <a href="https://wa.me/9043863855" target="_blank" class="text-dark fw-bold me-3"
+                <a href="https://wa.me/8903557197" target="_blank" class="text-dark fw-bold me-3"
                     style="text-decoration: none;">
                     <img src="images/whatsapp.png" alt="WhatsApp" style="width: 20px;" />&nbsp;Whatsapp
                 </a>
@@ -45,114 +54,57 @@
                         <a class="nav-link" href="service.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="our_doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <button class="btn button">Make an Appointment</button>
+                <a href="appointment.html" class="btn button">Make an Appointment</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="container-fluid">
-            <div class="row align-items-center hero-content-carousel">
-
-                <!-- Content Carousel (Left Column) -->
-                <div class="col-lg-6 col-md-12 content-carousel">
-                    <!-- Slide 1 -->
-                    <div class="content-slide active">
-                        <h1 class="hero-title">Health is wealth<br>keep it healthy</h1>
-                        <p class="hero-subtitle">
-                            Almost before we knew it, we had left the ground and were soaring through the clouds with
-                            expert care and advanced medical technology.
+ <section class="hero-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8">
+                    <div class="banner-con wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h1 class="banner-tit pt-4">About Us</h1>
+                        <p class="hero-tagline lh-lg">
+                            Providing exceptional healthcare services with compassion, expertise, and cutting-edge medical technology for your family's wellbeing.
                         </p>
-                        <button class="btn btn-service">Take a Service</button>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Expert Medical<br>Care For You</h1>
-                        <p class="hero-subtitle">
-                            Our dedicated team of healthcare professionals provides comprehensive medical services with
-                            state-of-the-art equipment and personalized treatment plans.
-                        </p>
-                        <button class="btn btn-service">Book Consultation</button>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Your Wellness<br>Our Priority</h1>
-                        <p class="hero-subtitle">
-                            Experience premium healthcare with our modern facilities, experienced doctors, and
-                            commitment to providing exceptional patient care every step of the way.
-                        </p>
-                        <button class="btn btn-service">Learn More</button>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Advanced Treatment<br>Better Results</h1>
-                        <p class="hero-subtitle">
-                            Utilizing cutting-edge medical technology and innovative treatment methods to ensure the
-                            best possible outcomes for our patients' health and recovery.
-                        </p>
-                        <button class="btn btn-service">Get Started</button>
-                    </div>
-
-                    <!-- Navigation Dots -->
-                    <div class="carousel-nav">
-                        <button class="nav-dot active" data-slide="0"></button>
-                        <button class="nav-dot" data-slide="1"></button>
-                        <button class="nav-dot" data-slide="2"></button>
-                        <button class="nav-dot" data-slide="3"></button>
+                        <a href="appointment.html" class="btn btn-appointment">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Book Appointment
+                        </a>
                     </div>
                 </div>
-
-                <!-- Fixed Image (Right Column) -->
-                <div class="col-lg-6 col-md-12 fixed-image-container">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Healthcare Professional" class="hero-image img-fluid">
-                    <div class="image-overlay"></div>
-                </div>
-
             </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control prev" id="prevBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
-                </svg>
-            </button>
-            <button class="carousel-control next" id="nextBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8.59 16.09l4.58-4.59-4.58-4.59L10 5.5l6 6-6 6z" />
-                </svg>
-            </button>
         </div>
     </section>
 
     <!-- About Us Section Starts -->
-    <section class="about-section">
+    <section class="about-section wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
         <div class="container pt-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 about-text">
                     <h2 class="fw-bold mb-4">About Our Company</h2>
-                    <h5>Caring for Hearts, Saving Lives.</h5>
                     <p class="lh-lg mb-4 text-justify text-muted">
-                        At Irene Hospital – Heart Care Centre, we provide expert cardiovascular care with advanced
-                        technology and a compassionate touch. From preventive screenings to complex heart surgeries, our
-                        mission is to protect, heal, and strengthen the hearts of our community.</p>
-                    <a href="about.html" target="_blank" class="btn button btn-lg">
-                        <i class="fas fa-rocket me-2"></i>Learn More
+                        City Heart Centre is dedicated to delivering expert cardiac and multi-specialty care with
+                        compassion and precision. Our skilled doctors, nurses, and staff combine advanced technology
+                        with personal attention for the best outcomes.</p>
+                    <p class="lh-lg mb-4 text-justify text-muted">While specializing in heart health, we also offer
+                        services in Paediatrics, General Medicine, Diabetology, Obstetrics & Gynaecology, Surgery,
+                        Orthopaedics, Neurology, Nephrology, and Urology — all under one roof.</p>
+                    <a href="" target="_blank" class="btn button btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Appointment
                     </a>
                 </div>
-                <div class="col-lg-6 about-visual p-5">
+                <div class="col-lg-6 p-5">
                     <div class="text-center">
-                        <img src="images/about-gif.gif" alt="About Us" class="img-fluid about-image">
+                        <img src="images/aboutus.jpg" alt="About Us" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -160,57 +112,295 @@
     </section>
     <!-- About Us Section Ends -->
 
-    <!-- Emergency Banner -->
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="emergency-banner text-white text-center rounded-4 p-4 shadow">
-                    <h3 class="fw-bold mb-2">24/7 Cardiac Emergency Care</h3>
-                    <p class="mb-3">Heart emergencies don't wait. Neither do we.</p>
-                    <h2 class="display-6 fw-bold mb-2">📞 +1-800-HEART-911</h2>
-                    <p class="mb-0 small">Our cardiac emergency team is ready 24/7 to provide immediate, life-saving
-                        care</p>
+    <!-- Mission Starts -->
+    <div class="container-fluid services-section">
+        <section class="container py-3">
+            <div class="main-head py-4 text-center">
+                <h2 class="main-title fw-bold">Our Story</h2>
+                <img src="images/divider.png" class="img-fluid" width="15%">
+            </div>
+            <!-- Services Grid -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-4 p-5 shadow h-100 position-relative overflow-hidden wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="bg-gradient position-absolute top-0 start-0 w-100" style="height: 5px;"></div>
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="fas fa-seedling fs-2"></i>
+                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-3">Our Beginning</h3>
+                        <p class="text-muted fs-6 lh-lg">Founded by Dr. Ashwin Lysander, Irene Hospital City Heart
+                            Centre began as a vision to bring comprehensive, compassionate healthcare to the people of
+                            Nagercoil. Starting with a focus on cardiology, we have grown into a multi-specialty hospital
+                            serving thousands of patients with dedication and expertise.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-4 p-5 shadow h-100 position-relative overflow-hidden wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="bg-gradient position-absolute top-0 start-0 w-100" style="height: 5px;"></div>
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="fas fa-heart fs-2"></i>
+                        </div>
+                        <h3 class="h4 fw-bold text-dark mb-3">Our Mission</h3>
+                        <p class="text-muted fs-6 lh-lg">To provide exceptional healthcare services through advanced
+                            medical technology, experienced professionals, and personalized patient care. We strive to
+                            be the trusted healthcare partner for families, offering comprehensive medical solutions
+                            under one roof with affordability and accessibility.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-                
-            <!-- Statistics -->
-             <div class="container">
-                 <div class="row">
-                <div class="col-12">
-                    <div class="card shadow-sm rounded-4 p-4">
-                        <div class="row text-center">
-                            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                                <div class="stat-number">15,000+</div>
-                                <small class="text-muted text-uppercase fw-bold">Procedures Annually</small>
+        </section>
+    </div>
+    <!-- Mission Ends -->
+
+    <!-- Counter Start -->
+    <div class="container-fluid my-4 m-0 p-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <section class="text-white abt-count py-3 position-relative overflow-hidden shadow-lg"
+            style="background-color: #182e76;">
+
+            <!-- Background Pattern -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="opacity: 0.1;">
+                <div class="d-flex justify-content-around align-items-center h-100">
+                    <i class="fas fa-plus-circle display-1 text-white animate-float" style="opacity: 0.9;"></i>
+                    <i class="fas fa-heartbeat display-1 text-white animate-float-delayed" style="opacity: 0.9;"></i>
+                    <i class="fas fa-user-md display-1 text-white animate-float" style="opacity: 0.9;"></i>
+                    <i class="fas fa-stethoscope display-1 text-white animate-float-delayed" style="opacity: 0.9;"></i>
+                </div>
+            </div>
+
+            <div class="container position-relative">
+                <div class="row text-center">
+                    <!-- Happy Clients Column -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="p-4 h-100 d-flex flex-column justify-content-center rounded-3">
+                            <div class="mb-3">
+                                <i class="fas fa-users fs-2 text-danger mb-3"></i>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                                <div class="stat-number">98.5%</div>
-                                <small class="text-muted text-uppercase fw-bold">Success Rate</small>
+                            <h2 class="fs-1 fw-bold text-white mb-2">
+                                <span class="counter" data-target="5000000">0</span>K+
+                            </h2>
+                            <h5 class="text-white mb-2 fs-5" style="opacity: 0.9;">Happy Clients</h5>
+                            <p class="text-white mb-0 small" style="opacity: 0.7;">Satisfied customers worldwide</p>
+                        </div>
+                    </div>
+
+                    <!-- Years of Experience Column -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="p-4 h-100 d-flex flex-column justify-content-center border-start border-end border-white rounded-3"
+                            style="border-opacity: 0.25 !important;">
+                            <div class="mb-3">
+                                <i class="fas fa-calendar-check fs-2 text-danger mb-3"></i>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <div class="stat-number">50+</div>
-                                <small class="text-muted text-uppercase fw-bold">Expert Cardiologists</small>
+                            <h2 class="fs-1 fw-bold text-white mb-2">
+                                <span class="counter" data-target="20">0</span>+
+                            </h2>
+                            <h5 class="text-white mb-2 fs-5" style="opacity: 0.9;">Years of Experience</h5>
+                            <p class="text-white mb-0 small" style="opacity: 0.7;">Trusted healthcare expertise</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctors Column -->
+                    <div class="col-md-4">
+                        <div class="p-4 h-100 d-flex flex-column justify-content-center rounded-3">
+                            <div class="mb-3">
+                                <i class="fas fa-user-md fs-2 text-danger mb-3"></i>
                             </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="stat-number">25</div>
-                                <small class="text-muted text-uppercase fw-bold">Years of Excellence</small>
+                            <h2 class="fs-1 fw-bold text-white mb-2">
+                                <span class="counter" data-target="50">0</span>+
+                            </h2>
+                            <h5 class="text-white mb-2 fs-5" style="opacity: 0.9;">Expert Doctors</h5>
+                            <p class="text-white mb-0 small" style="opacity: 0.7;">Professional medical team</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom decorative line -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <hr class="border-white border-2" style="opacity: 0.25;">
+                        <h4 class="text-center text-white mb-0">
+                            <a href="tel:+91 8903557197" class="text-white text-decoration-none" style="opacity: 0.7;">
+                            <i class="fas fa-phone text-warning me-2"></i>
+                          Make your Appointment</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Counter End -->
+
+    <!-- Why Choose Start -->
+    <div class="bg-white wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="container py-5">
+                <div class="main-head py-4 text-center">
+                <h2 class="main-title fw-bold">Why Choose Us</h2>
+                <img src="images/divider.png" class="img-fluid" width="15%">
+            </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-gradient text-white rounded-4 p-4 text-center h-100 position-relative overflow-hidden transition-all hover-lift">
+                            <div class="mb-4">
+                                <i class="fas fa-microscope" style="font-size: 3rem;"></i>
                             </div>
+                            <h4 class="h6 fw-bold mb-3">Advanced Technology</h4>
+                            <p class="small opacity-75 lh-lg">State-of-the-art medical equipment and diagnostic facilities for accurate diagnosis and treatment.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-gradient text-white rounded-4 p-4 text-center h-100 position-relative overflow-hidden transition-all hover-lift">
+                            <div class="mb-4">
+                                <i class="fas fa-user-md" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="h6 fw-bold mb-3">Expert Doctors</h4>
+                            <p class="small opacity-75 lh-lg">Highly qualified specialists across multiple departments with years of experience and expertise.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-gradient text-white rounded-4 p-4 text-center h-100 position-relative overflow-hidden transition-all hover-lift">
+                            <div class="mb-4">
+                                <i class="fas fa-clock" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="h6 fw-bold mb-3">24/7 Emergency</h4>
+                            <p class="small opacity-75 lh-lg">Round-the-clock emergency services with immediate response and critical care capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-gradient text-white rounded-4 p-4 text-center h-100 position-relative overflow-hidden transition-all hover-lift">
+                            <div class="mb-4">
+                                <i class="fas fa-heart" style="font-size: 3rem;"></i>
+                            </div>
+                            <h4 class="h6 fw-bold mb-3">Personalized Care</h4>
+                            <p class="small opacity-75 lh-lg">Individual attention and customized treatment plans tailored to each patient's unique needs.</p>
                         </div>
                     </div>
                 </div>
             </div>
-             </div>
-           
+        </div>
+    <!-- Why Choose End -->
 
-
+    <!-- Footer Start -->
+    <footer class="wow fadeInUp">
+        <div class="container-fluid footer p-5 text-light py-5 wow fadeInUp mt-3" data-wow-delay="0.3s">
+            <div class="container pt-5">
+                <div class="row g-5 pt-4">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-dark mb-4">
+                            <img src="images/logo.png" alt="Logo" class="img-fluid" style="height: 70px;">
+                        </h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <h5 class="text-dark" style="font-style: italic;">Restoring Health with Compassion and Trust.</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 foot-icon">
+                        <h5 class="text-dark mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2 text-decoration-none" href="index.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="about.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>About
+                                Us</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="service.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Services </a>
+                            <a class="text-dark mb-2 text-decoration-none" href="our_doctors.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Our Doctors </a>
+                            <a class="text-dark text-decoration-none" href="contact.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 foot-icon text-dark">
+                        <h5 class="text-dark mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>181, KP Road, Mathias Nager, Nagercoil -
+                            629001
+                        <p>
+                        <p class="mb-2"><i class="bi bi-envelope-open me-2"></i>abc@gmail.com</p>
+                        <p class="mb-0"><i class="bi bi-telephone me-2"></i>+91 8903557197, 04652 - 278645</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5 class="text-dark mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank"
+                                href="https://www.linkedin.com/company/irene-hospital-chc/posts/?feedView=all"><i class="fab fa-linkedin fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.facebook.com/people/Irene-Hospital/61579508540143/"><i
+                                    class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/irene_hospital/"><i
+                                    class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.youtube.com/@IreneHospital-CHC"><i
+                                    class="fab fa-youtube fw-normal"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-dark copyright py-4">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center text-md-start">
+                        <p class="mb-md-0 text-center">&copy; 2025 All
+                            Rights Reserved. Designed by <a class="text-dark text-decoration-none" target="_blank"
+                                href="https://feathersoftwares.com/"><b>Feather Softwares</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Counter -->
+    <script>
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
 
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target === 5000000 ? '50' : target;
+                    clearInterval(timer);
+                } else {
+                    if (target === 5000000) {
+                        element.textContent = Math.floor(current / 100000);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }
+            }, 16);
+        }
+
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach((counter, index) => {
+                        if (!counter.classList.contains('animated')) {
+                            setTimeout(() => {
+                                counter.classList.add('animated');
+                                animateCounter(counter);
+                            }, index * 200);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const statsSection = document.querySelector('.abt-count');
+            observer.observe(statsSection);
+        });
+    </script>
 
 </body>
 

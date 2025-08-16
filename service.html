@@ -12,9 +12,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
+    <div class="call_pin">
+    <a href="tel:+918903557197"><img src="images/phone-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
+    <div class="whats_pin">
+    <a href="https://wa.me/8903557197" target="_blank"><img src="images/whatsapp-bottom.png" alt="img"
+        style="z-index: 9;" /></a>
+  </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -22,10 +31,10 @@
                 <img src="images/logo.png" alt="Logo" class="img-fluid me-4" width="50" height="50">
             </a>
             <div class="d-flex align-items-center gap-3">
-                <a href="tel:+91 9043863855" class="text-dark fw-bold me-3" style="text-decoration: none;">
+                <a href="tel:+91 8903557197" class="text-dark fw-bold me-3" style="text-decoration: none;">
                     <img src="images/phone.png" alt="Call" style="width: 20px;" /> Call Us
                 </a>
-                <a href="https://wa.me/9043863855" target="_blank" class="text-dark fw-bold me-3"
+                <a href="https://wa.me/8903557197" target="_blank" class="text-dark fw-bold me-3"
                     style="text-decoration: none;">
                     <img src="images/whatsapp.png" alt="WhatsApp" style="width: 20px;" />&nbsp;Whatsapp
                 </a>
@@ -45,97 +54,36 @@
                         <a class="nav-link" href="service.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="our_doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <button class="btn button">Make an Appointment</button>
+                <a href="appointment.html" class="btn button">Make an Appointment</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="container-fluid">
-            <div class="row align-items-center hero-content-carousel">
-
-                <!-- Content Carousel (Left Column) -->
-                <div class="col-lg-6 col-md-12 content-carousel">
-                    <!-- Slide 1 -->
-                    <div class="content-slide active">
-                        <h1 class="hero-title">Health is wealth<br>keep it healthy</h1>
-                        <p class="hero-subtitle">
-                            Almost before we knew it, we had left the ground and were soaring through the clouds with
-                            expert care and advanced medical technology.
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8">
+                    <div class="banner-con wow fadeInLeft">
+                        <h1 class="banner-tit pt-4">Services</h1>
+                        <p class="hero-tagline lh-lg">
+                            Comprehensive medical services and compassionate care for every stage of life
                         </p>
-                        <button class="btn btn-service">Take a Service</button>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Expert Medical<br>Care For You</h1>
-                        <p class="hero-subtitle">
-                            Our dedicated team of healthcare professionals provides comprehensive medical services with
-                            state-of-the-art equipment and personalized treatment plans.
-                        </p>
-                        <button class="btn btn-service">Book Consultation</button>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Your Wellness<br>Our Priority</h1>
-                        <p class="hero-subtitle">
-                            Experience premium healthcare with our modern facilities, experienced doctors, and
-                            commitment to providing exceptional patient care every step of the way.
-                        </p>
-                        <button class="btn btn-service">Learn More</button>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="content-slide">
-                        <h1 class="hero-title">Advanced Treatment<br>Better Results</h1>
-                        <p class="hero-subtitle">
-                            Utilizing cutting-edge medical technology and innovative treatment methods to ensure the
-                            best possible outcomes for our patients' health and recovery.
-                        </p>
-                        <button class="btn btn-service">Get Started</button>
-                    </div>
-
-                    <!-- Navigation Dots -->
-                    <div class="carousel-nav">
-                        <button class="nav-dot active" data-slide="0"></button>
-                        <button class="nav-dot" data-slide="1"></button>
-                        <button class="nav-dot" data-slide="2"></button>
-                        <button class="nav-dot" data-slide="3"></button>
+                        <a href="appointment.html" class="btn btn-appointment">
+                            <i class="fas fa-calendar-check me-2"></i>
+                            Book Appointment
+                        </a>
                     </div>
                 </div>
-
-                <!-- Fixed Image (Right Column) -->
-                <div class="col-lg-6 col-md-12 fixed-image-container">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Healthcare Professional" class="hero-image img-fluid">
-                    <div class="image-overlay"></div>
-                </div>
-
             </div>
-
-            <!-- Carousel Controls -->
-            <button class="carousel-control prev" id="prevBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
-                </svg>
-            </button>
-            <button class="carousel-control next" id="nextBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8.59 16.09l4.58-4.59-4.58-4.59L10 5.5l6 6-6 6z" />
-                </svg>
-            </button>
         </div>
     </section>
-
-
 
     <!-- Service Start -->
     <div class="container-fluid services-section">
@@ -152,7 +100,7 @@
 
                 <!-- Paediatrics -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-baby text-white fs-2"></i>
@@ -173,7 +121,7 @@
 
                 <!-- General Medicine -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-user-md text-white fs-2"></i>
@@ -194,7 +142,7 @@
 
                 <!-- Diabetology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-syringe text-white fs-2"></i>
@@ -215,7 +163,7 @@
 
                 <!-- Obstetrics & Gynaecology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-female text-white fs-2"></i>
@@ -236,7 +184,7 @@
 
                 <!-- General Surgery & Laparoscopic Surgery -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                <i class="fa-solid fa-cut fs-2 text-white"></i>   
@@ -257,7 +205,7 @@
 
                 <!-- Infertility & Reproductive Medicine -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-heart text-white fs-2"></i>
@@ -278,7 +226,7 @@
 
                 <!-- Anaesthesiology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-lungs text-white fs-2"></i>
@@ -299,7 +247,7 @@
 
                 <!-- Orthopedics -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-bone text-white fs-2"></i>
@@ -320,7 +268,7 @@
 
                 <!-- Cardiology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-heartbeat text-white fs-2"></i>
@@ -341,7 +289,7 @@
 
                 <!-- Neurology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-brain text-white fs-2"></i>
@@ -362,7 +310,7 @@
 
                 <!-- Nephrology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-tint text-white fs-2"></i>
@@ -383,7 +331,7 @@
 
                 <!-- Urology -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card service-card h-100 shadow rounded-4 p-4">
+                    <div class="card service-card h-100 shadow rounded-4 p-4 wow fadeInUp">
                         <div class="text-center mb-4">
                             <div class="service-icon rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3">
                                 <i class="fas fa-toilet text-white fs-2"></i>
@@ -407,11 +355,146 @@
 
         </section>
     </div>
-
     <!-- Service end -->
+
+    <!-- Our Values Start -->
+    <div class="bg-white wow fadeInUp">
+        <div class="container py-5">
+            <div class="main-head py-4 text-center">
+                <h2 class="main-title fw-bold">Our Core Values</h2>
+                <img src="images/divider.png" class="img-fluid mb-3" width="15%">
+                <p class="fs-5 text-muted mx-auto" style="max-width: 600px;">The principles that guide everything we do
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="text-center shadow p-4 rounded-4 h-100 transition-all hover-lift border-2 border-transparent">
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mx-auto mb-4"
+                            style="width: 100px; height: 100px;">
+                            <i class="fas fa-heart" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-3">Compassion</h4>
+                        <p class="text-muted">We treat every patient with empathy, understanding, and genuine care,
+                            ensuring comfort during their healing journey.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="text-center shadow p-4 rounded-4 h-100 transition-all hover-lift border-2 border-transparent">
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mx-auto mb-4"
+                            style="width: 100px; height: 100px;">
+                            <i class="fas fa-medal" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-3">Excellence</h4>
+                        <p class="text-muted">We maintain the highest standards in medical care, continuously improving
+                            our services and outcomes for patients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="text-center shadow p-4 rounded-4 h-100 transition-all hover-lift border-2 border-transparent">
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mx-auto mb-4"
+                            style="width: 100px; height: 100px;">
+                            <i class="fas fa-handshake" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-3">Integrity</h4>
+                        <p class="text-muted">We uphold honesty, transparency, and ethical practices in all our
+                            interactions and medical decisions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="text-center shadow p-4 rounded-4 h-100 transition-all hover-lift border-2 border-transparent">
+                        <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center text-white mx-auto mb-4"
+                            style="width: 100px; height: 100px;">
+                            <i class="fas fa-lightbulb" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-dark mb-3">Innovation</h4>
+                        <p class="text-muted">We embrace cutting-edge technology and modern medical practices to provide
+                            the best possible care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Values End -->
+
+     <!-- Footer Start -->
+    <footer class="wow fadeInUp">
+        <div class="container-fluid footer p-5 text-light py-5 wow fadeInUp mt-3" data-wow-delay="0.3s">
+            <div class="container pt-5">
+                <div class="row g-5 pt-4">
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-dark mb-4">
+                            <img src="images/logo.png" alt="Logo" class="img-fluid" style="height: 70px;">
+                        </h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <h5 class="text-dark" style="font-style: italic;">Restoring Health with Compassion and Trust.</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 foot-icon">
+                        <h5 class="text-dark mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2 text-decoration-none" href="index.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="about.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>About
+                                Us</a>
+                            <a class="text-dark mb-2 text-decoration-none" href="service.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Services </a>
+                            <a class="text-dark mb-2 text-decoration-none" href="our_doctors.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Our Doctors </a>
+                            <a class="text-dark text-decoration-none" href="contact.html"><i
+                                    class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 foot-icon text-dark">
+                        <h5 class="text-dark mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>181, KP Road, Mathias Nager, Nagercoil -
+                            629001
+                        <p>
+                        <p class="mb-2"><i class="bi bi-envelope-open me-2"></i>abc@gmail.com</p>
+                        <p class="mb-0"><i class="bi bi-telephone me-2"></i>+91 8903557197, 04652 - 278645</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5 class="text-dark mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank"
+                                href="https://www.linkedin.com/company/irene-hospital-chc/posts/?feedView=all"><i class="fab fa-linkedin fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.facebook.com/people/Irene-Hospital/61579508540143/"><i
+                                    class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/irene_hospital/"><i
+                                    class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-lg button btn-lg-square rounded-circle me-2" target="_blank" href="https://www.youtube.com/@IreneHospital-CHC"><i
+                                    class="fab fa-youtube fw-normal"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-dark copyright py-4">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-12 text-center text-md-start">
+                        <p class="mb-md-0 text-center">&copy; 2025 All
+                            Rights Reserved. Designed by <a class="text-dark text-decoration-none" target="_blank"
+                                href="https://feathersoftwares.com/"><b>Feather Softwares</b></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 
 </body>

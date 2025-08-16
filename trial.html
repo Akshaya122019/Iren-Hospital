@@ -3,148 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Hero Section</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hospital Preloader</title>
     <style>
-        .hero-section {
-            background: linear-gradient(135deg, #a8d5a8 0%, #7bc97b 100%);
-            min-height: 400px;
+        .hospital-preloader * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hospital-preloader-body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .hospital-loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .hospital-loading-screen.hospital-fade-complete {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .hospital-content-wrapper {
+            text-align: center;
+            animation: hospital-slide-up 1s ease-out;
+        }
+
+        .hospital-medical-symbol {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            animation: hospital-breathing-effect 2s infinite ease-in-out;
+        }
+
+        .hospital-cross-bar-h,
+        .hospital-cross-bar-v {
+            position: absolute;
+            background: white;
+            border-radius: 4px;
+            animation: hospital-shimmer-glow 2s infinite ease-in-out alternate;
+        }
+
+        .hospital-cross-bar-h {
+            width: 80px;
+            height: 20px;
+            top: 30px;
+            left: 0;
+        }
+
+        .hospital-cross-bar-v {
+            width: 20px;
+            height: 80px;
+            top: 0;
+            left: 30px;
+        }
+
+        .hospital-pulse-monitor {
+            width: 100px;
+            height: 40px;
+            margin: 0 auto 30px;
             position: relative;
             overflow: hidden;
         }
-        
-        .curved-shape {
+
+        .hospital-ecg-line {
             position: absolute;
-            right: -50px;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-            background: #59da59;
-            border-radius: 50px 0 0 50px;
+            width: 200%;
+            height: 2px;
+            background: white;
+            top: 50%;
+            left: -100%;
+            animation: hospital-ecg-sweep 3s infinite linear;
         }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 60px 0;
-        }
-        
-        .hero-image {
-            position: relative;
-            z-index: 3;
-        }
-        
-        .hero-image img {
-            border-radius: 20px;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            max-height: 500px;
-        }
-        
-        .decorative-dots {
+
+        .hospital-ecg-line::before {
+            content: '';
             position: absolute;
-            left: 20px;
-            bottom: 30px;
-            opacity: 0.3;
-        }
-        
-        .dot {
-            width: 8px;
-            height: 8px;
+            width: 20px;
+            height: 20px;
             background: white;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 6px;
+            top: -9px;
+            left: 20%;
+            clip-path: polygon(0% 40%, 20% 0%, 40% 40%, 60% 0%, 80% 40%, 100% 40%, 90% 60%, 70% 40%, 50% 60%, 30% 40%, 10% 60%);
+            animation: hospital-ecg-blip 3s infinite linear;
         }
-        
-        .btn-custom {
-            background: transparent;
-            border: 2px solid white;
+
+        .hospital-main-title {
             color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-custom:hover {
-            background: white;
-            color: #7bc97b;
-        }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
             margin-bottom: 20px;
-            line-height: 1.2;
+            animation: hospital-text-breathe 2s infinite ease-in-out;
         }
-        
-        .hero-subtitle {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
+
+        .hospital-sub-title {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
-        
+
+        .hospital-load-bar {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            margin: 30px auto 0;
+            overflow: hidden;
+        }
+
+        .hospital-load-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 2px;
+            animation: hospital-progress-fill 4s ease-out forwards;
+        }
+
+        .hospital-bg-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .hospital-floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            animation: hospital-drift-motion 6s infinite ease-in-out;
+        }
+
+        .hospital-floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            font-size: 30px;
+        }
+
+        .hospital-floating-icon:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+            font-size: 25px;
+        }
+
+        .hospital-floating-icon:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+            font-size: 35px;
+        }
+
+        .hospital-floating-icon:nth-child(4) {
+            top: 30%;
+            right: 25%;
+            animation-delay: 1s;
+            font-size: 28px;
+        }
+
+        /* Hospital Custom Animations */
+        @keyframes hospital-breathing-effect {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes hospital-shimmer-glow {
+            0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4); }
+        }
+
+        @keyframes hospital-ecg-sweep {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes hospital-ecg-blip {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes hospital-text-breathe {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes hospital-slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes hospital-progress-fill {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes hospital-drift-motion {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 0.2;
+            }
+        }
+
+        /* Hospital Responsive Styles */
         @media (max-width: 768px) {
-            .curved-shape {
-                display: none;
+            .hospital-medical-symbol {
+                width: 60px;
+                height: 60px;
             }
-            .hero-title {
-                font-size: 2rem;
+
+            .hospital-cross-bar-h {
+                width: 60px;
+                height: 15px;
+                top: 22.5px;
             }
-            .hero-content {
-                padding: 40px 0;
+
+            .hospital-cross-bar-v {
+                width: 15px;
+                height: 60px;
+                left: 22.5px;
+            }
+
+            .hospital-main-title {
+                font-size: 20px;
+            }
+
+            .hospital-load-bar {
+                width: 150px;
             }
         }
     </style>
 </head>
-<body>
-    <section class="hero-section">
-        <div class="curved-shape"></div>
-        
-        <!-- Decorative dots -->
-        <div class="decorative-dots">
-            <div class="row">
-                <div class="col-12">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-            </div>
+<body class="hospital-preloader-body">
+    <div class="hospital-loading-screen hospital-preloader" id="hospitalPreloaderMain">
+        <div class="hospital-bg-icons">
+            <div class="hospital-floating-icon">⚕️</div>
+            <div class="hospital-floating-icon">💊</div>
+            <div class="hospital-floating-icon">🏥</div>
+            <div class="hospital-floating-icon">🩺</div>
         </div>
         
-        <div class="container">
-            <div class="row align-items-center hero-content">
-                <div class="col-lg-6 col-md-6">
-                    <h1 class="hero-title">100% Satisfaction<br>Guaranteed.</h1>
-                    <p class="hero-subtitle">Almost before we knew it, we<br>had left the ground</p>
-                    <button class="btn btn-custom">Make an Appointment</button>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="hero-image text-center">
-                        <img src="images/doctor.avif" class="img-fluid">
-                    </div>
-                </div>
+        <div class="hospital-content-wrapper">
+            <div class="hospital-medical-symbol">
+                <div class="hospital-cross-bar-h"></div>
+                <div class="hospital-cross-bar-v"></div>
+            </div>
+            
+            <div class="hospital-pulse-monitor">
+                <div class="hospital-ecg-line"></div>
+            </div>
+            
+            <div class="hospital-main-title">HEALTHCARE</div>
+            <div class="hospital-sub-title">Loading your health portal</div>
+            
+            <div class="hospital-load-bar">
+                <div class="hospital-load-progress"></div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Simulated main content -->
+    <div id="hospitalMainContent" style="display: none; padding: 50px; text-align: center; font-family: Arial, sans-serif;">
+        <h1 style="color: #667eea; margin-bottom: 20px;">Welcome to Our Hospital</h1>
+        <p style="color: #666; font-size: 18px;">Your trusted healthcare partner</p>
+        <button onclick="showHospitalPreloader()" style="margin-top: 30px; padding: 12px 24px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Show Preloader Again</button>
+    </div>
+
+    <script>
+        // Hospital preloader functionality
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const hospitalLoader = document.getElementById('hospitalPreloaderMain');
+                const hospitalContent = document.getElementById('hospitalMainContent');
+                
+                hospitalLoader.classList.add('hospital-fade-complete');
+                
+                setTimeout(function() {
+                    hospitalLoader.style.display = 'none';
+                    hospitalContent.style.display = 'block';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 4000); // Show hospital preloader for 4 seconds
+        });
+
+        // Function to show hospital preloader again (for demo purposes)
+        function showHospitalPreloader() {
+            const hospitalLoader = document.getElementById('hospitalPreloaderMain');
+            const hospitalContent = document.getElementById('hospitalMainContent');
+            
+            hospitalLoader.style.display = 'flex';
+            hospitalLoader.classList.remove('hospital-fade-complete');
+            hospitalContent.style.display = 'none';
+            document.body.style.overflow = 'hidden';
+            
+            // Reset hospital progress bar animation
+            const hospitalProgressBar = document.querySelector('.hospital-load-progress');
+            hospitalProgressBar.style.animation = 'none';
+            setTimeout(() => {
+                hospitalProgressBar.style.animation = 'hospital-progress-fill 4s ease-out forwards';
+            }, 10);
+            
+            // Hide hospital preloader again after 4 seconds
+            setTimeout(function() {
+                hospitalLoader.classList.add('hospital-fade-complete');
+                setTimeout(function() {
+                    hospitalLoader.style.display = 'none';
+                    hospitalContent.style.display = 'block';
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            }, 4000);
+        }
+
+        // Add hospital interactive hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const hospitalCross = document.querySelector('.hospital-medical-symbol');
+            
+            hospitalCross.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            hospitalCross.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>

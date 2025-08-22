@@ -1072,7 +1072,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #76b2da 0%, #586f91 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1093,23 +1093,27 @@ footer {
 
 .hospital-medical-symbol {
     position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 30px;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto 10px;
     animation: hospital-breathing-effect 2s infinite ease-in-out;
 }
+.hospital-medical-symbol img{
+    height: 100%;
+    width: 100%;
+}
 
-.hospital-cross-bar-h,
+/* .hospital-cross-bar-h,
 .hospital-cross-bar-v {
     position: absolute;
     background: white;
     border-radius: 4px;
     animation: hospital-shimmer-glow 2s infinite ease-in-out alternate;
-}
+} */
 
-.hospital-cross-bar-h {
-    width: 80px;
-    height: 20px;
+/* .hospital-cross-bar-h {
+    width: 100px;
+    height: 90px;
     top: 30px;
     left: 0;
 }
@@ -1119,12 +1123,12 @@ footer {
     height: 80px;
     top: 0;
     left: 30px;
-}
+} */
 
 .hospital-pulse-monitor {
     width: 100px;
     height: 40px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
     position: relative;
     overflow: hidden;
 }

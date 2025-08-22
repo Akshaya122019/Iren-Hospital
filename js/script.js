@@ -57,145 +57,35 @@
         });
 
         
-document.addEventListener('DOMContentLoaded', function () {
-    try {
-        const slides = Array.from(document.querySelectorAll('.content-slide'));
-        if (slides.length === 0) {
-            console.warn('Carousel: no slides found.');
-            return;
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }
+      });
+    });
 
-        const navContainer = document.querySelector('.carousel-nav');
-        let dots = Array.from(document.querySelectorAll('.nav-dot'));
-
-        // If dot count doesn't match slides, (re)build the dots to avoid runtime errors.
-        if (navContainer && dots.length !== slides.length) {
-            navContainer.innerHTML = '';
-            for (let i = 0; i < slides.length; i++) {
-                const b = document.createElement('button');
-                b.className = 'nav-dot' + (i === 0 ? ' active' : '');
-                b.setAttribute('data-slide', i);
-                navContainer.appendChild(b);
-            }
-            dots = Array.from(navContainer.querySelectorAll('.nav-dot'));
-        }
-
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const carouselContainer = document.querySelector('.hero-content-carousel');
-
-        let currentSlide = 0;
-        let autoTimer = null;
-        const INTERVAL = 3000; // ms
-
-        // Safely set the active slide and dot
-        function setActive(index) {
-            if (index < 0 || index >= slides.length) return;
-            slides.forEach((s, i) => {
-                s.classList.toggle('active', i === index);
-            });
-            if (dots.length === slides.length) {
-                dots.forEach((d, i) => d.classList.toggle('active', i === index));
-            }
-            currentSlide = index;
-        }
-
-        function nextSlide() {
-            setActive((currentSlide + 1) % slides.length);
-        }
-
-        function prevSlide() {
-            setActive((currentSlide - 1 + slides.length) % slides.length);
-        }
-
-        // Use a recursive setTimeout for predictable behavior and easy restart/stop
-        function scheduleAuto() {
-            clearTimeout(autoTimer);
-            autoTimer = setTimeout(function tick() {
-                nextSlide();
-                autoTimer = setTimeout(tick, INTERVAL);
-            }, INTERVAL);
-        }
-
-        function startAuto() {
-            if (!autoTimer) scheduleAuto();
-        }
-
-        function stopAuto() {
-            clearTimeout(autoTimer);
-            autoTimer = null;
-        }
-
-        function restartAuto() {
-            stopAuto();
-            scheduleAuto();
-        }
-
-        // Event wiring (guarded)
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                restartAuto();
-            });
-        }
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                restartAuto();
-            });
-        }
-
-        if (dots.length === slides.length) {
-            dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    setActive(idx);
-                    restartAuto();
-                });
-            });
-        }
-
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', stopAuto);
-            carouselContainer.addEventListener('mouseleave', startAuto);
-
-            // Touch/swipe support
-            let touchStartX = 0;
-            let touchEndX = 0;
-            carouselContainer.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            carouselContainer.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const diff = touchStartX - touchEndX;
-                const threshold = 50;
-                if (Math.abs(diff) > threshold) {
-                    if (diff > 0) nextSlide();
-                    else prevSlide();
-                    restartAuto();
-                }
-            });
-        }
-
-        // Keyboard navigation (global)
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                restartAuto();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                restartAuto();
-            }
-        });
-
-        // Init and start
-        setActive(0); // ensure DOM and internal state match
-        startAuto();
-
-        console.info(`Carousel initialized — ${slides.length} slides.`);
-    } catch (err) {
-        console.error('Carousel initialization error:', err);
-    }
-});
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar-custom');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+      }
+    });
 
 $(document).ready(function(){
             // Price carousel
@@ -255,9 +145,32 @@ function sendDataToWhatsApp() {
     }
 
     const whatsappMessage = `Name: ${name}\nEmail: ${email}\nPhoneNumber: ${phone}\nMessage: ${message}`;
-    const whatsappNumber = '8903557197';
+    const whatsappNumber = '9843244630';
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(whatsappMessage)}`;
 
     window.open(whatsappUrl, '_blank');
     alert('Your message has been sucessfully sent');
 }
+
+// Doctor Card
+        // Smooth animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animation
+        const physicianCard = document.querySelector('.physician-card');
+        physicianCard.style.opacity = '0';
+        physicianCard.style.transform = 'translateY(30px)';
+        physicianCard.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(physicianCard);
